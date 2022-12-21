@@ -7,7 +7,7 @@ const NoticiaSchema = new Schema(
         descripcion: String,
         categoria: String,
         imagen: String,
-        fecha: Date
+        fecha: String
     }, {
         timestamps: false,
         versionKey: false

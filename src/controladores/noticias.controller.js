@@ -24,6 +24,11 @@ export const updateNoticia = async (req, res) => {
 }
 export const deleteNoticia = async (req, res) => {
     const noticiaDeleted = await Noticia.findByIdAndDelete(req.params.id);
+    if (!noticiaDeleted) {
+      res.status(400).json({
+        error: "No se encontro la noticia"
+      });
+    }
     res.status(204).json(noticiaDeleted);
 }
 
