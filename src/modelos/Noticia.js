@@ -4,8 +4,9 @@ const NoticiaSchema = new Schema(
     {
         titulo: String,
         subtitulo: String,
-        description: String,
-        image: String,
+        descripcion: String,
+        categoria: String,
+        imagen: String,
         fecha: Date
     }, {
         timestamps: false,

@@ -4,6 +4,7 @@ import {verifyToken} from "../middleware/rolAuthenticator";
 
 const router = Router();
 router.get("/", noticiasCtrl.getNoticias);
+router.get("/:id", noticiasCtrl.getNoticia);
 router.post("/", verifyToken, noticiasCtrl.createNoticia);
 router.delete("/:id", verifyToken, noticiasCtrl.deleteNoticia);
 router.put("/:id", verifyToken, noticiasCtrl.updateNoticia);
